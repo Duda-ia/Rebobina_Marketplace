@@ -1,1 +1,15 @@
-<h1>ola</h1>
+<div class="container">
+  <h1>Products</h1>
+
+  <div id='products'>
+    <% @products.each do |product| %>
+      <p><%= product.name %></p>
+      <p><%= product.category %></p>
+      <p><%= product.description %></p>
+      <p><%= product.price %></p>
+      <p>
+        <%= link_to 'Show this product', product %>
+      </p>
+      <% end %>
+  </div>
+</div>
