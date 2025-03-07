@@ -1,5 +1,7 @@
 
-
-<p style="color: green"><%= notice %></p>
-<%= render @product %>
-<%= button_to "Deletar", product_path(@product), method: :delete, data: { confirm: "Tem certeza?" } %>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <%= render @product %>
+  <%= link_to "edit", edit_product_path(@product) %>
+  <%= button_to "Deletar", product_path(@product), method: :delete, data: { confirm: "Tem certeza?" }%>
+</div>

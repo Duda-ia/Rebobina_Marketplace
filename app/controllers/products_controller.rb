@@ -1,12 +1,27 @@
 class ProductsController < ApplicationController
 
-before_action :set_product, only: [:show, :destroy]
+  # before_action :set_product, only: [:update]
 
   def index
     @products = Product.all
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to products_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def show
+    # raise
+    @product = Product.find(params[:id])
   end
 
   def new
@@ -17,8 +32,10 @@ before_action :set_product, only: [:show, :destroy]
     @product = Product.new(product_params)
     @product.user = current_user
     if @product.save
+      # raise
       redirect_to products_path
     else
+      # raise
       render :new, status: :unprocessable_entity
     end
   end
