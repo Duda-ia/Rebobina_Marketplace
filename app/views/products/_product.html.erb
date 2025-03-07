@@ -1,0 +1,27 @@
+<div class="product-details">
+  <h3><%= product.name %></h3>
+  <p>
+    <strong>Categoria:</strong>
+    <%= product.category %>
+  </p>
+  <p>
+    <strong>Descrição:</strong>
+    <%= product.description %>
+  </p>
+  <p>
+    <strong>Preço:</strong>
+    <%= number_to_currency(product.price) %>
+  </p>
+  <p>
+    <strong>Usuário (ID):</strong>
+    <%= product.user_id %>
+  </p>
+  <p>
+    <strong>Criado em:</strong>
+    <%= product.created_at.strftime("%d/%m/%Y %H:%M") %>
+  </p>
+  <p>
+    <strong>Atualizado em:</strong>
+    <%= product.updated_at.strftime("%d/%m/%Y %H:%M") %>
+  </p>
+</div>
