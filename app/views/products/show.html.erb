@@ -1,0 +1,13 @@
+
+
+<p style="color: green"><%= notice %></p>
+<%= render @product %>
+
+<h2>Produtos Relacionados:</h2>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= product.name %>
+    </li>
+  <% end %>
+</ul>
