@@ -1,1 +1,10 @@
-<h1>ola</h1>
+<h1>Products</h1>
+
+<div id='products'>
+  <%= @products.each do |product| %>
+    <%= product %>
+    <p>
+      <%= link_to 'Show this product', product %>
+    </p>
+    <% end %>
+</div>
