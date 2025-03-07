@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+before_action :set_product, only: [:show, :destroy]
 
   def index
     @products = Product.all
@@ -40,6 +40,6 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(params.expect(:id))
+    @product = Product.find(params[:id])
   end
 end
