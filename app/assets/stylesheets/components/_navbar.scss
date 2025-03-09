@@ -1,12 +1,41 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-container {
+  display: flex;
+  align-items: center;       // Alinha verticalmente no meio
+  /* justify-content: space-between;  // Se quiser que logo fique à esquerda e nav à direita, com a search no meio */
+  gap: 1rem;                 // Espaço horizontal entre cada item
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border-bottom: 2px solid #000;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  // Se quiser a logo sempre à esquerda, e o restante “empurrado” para a direita, poderia usar margin-right: auto;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.search-bar {
+  flex: 1;   // Faz a barra de busca ocupar todo o espaço restante no meio
+  display: flex;
+
+  input[type="text"] {
+    width: 100%;     // Ocupa toda a área
+    padding: 0.5rem;
+    border: 2px solid #000;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    padding: 0.5rem 0.75rem;
+    &:hover {
+      background: #eee;
+    }
+  }
 }
