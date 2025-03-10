@@ -7,9 +7,15 @@
   </div>
 
   <nav class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Categorias</a>
-    <a href="#">Sign In</a>
-    <a href="#">Login</a>
+    <% if user_signed_in? %>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Categories", products_path %>
+      <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+    <% else %>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Categories", products_path %>
+      <%= link_to "Login", new_user_session_path %>
+      <%= link_to "Sign In", new_user_registration_path %>
+    <% end %>
   </nav>
 </div>
