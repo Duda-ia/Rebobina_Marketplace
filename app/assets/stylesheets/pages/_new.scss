@@ -1,10 +1,7 @@
-
 .section-title {
-  margin-top: 2rem;   /* Adds space above the title */
+  margin-top: 2rem;       /* Adds space above the title */
   color: #007BFF;
-  text-align: center;
-  justify-content: center;
-  width: 500px;
-  margin-left: 400px;
-
+  text-align: center;     /* Center the text inside the container */
+  margin: 2rem auto;
+  margin-left: 17rem;      /* Center container horizontally */
 }
