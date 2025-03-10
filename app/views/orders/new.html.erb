@@ -1,4 +1,6 @@
-<h1>olá</h1>
+<div class="container">
+<h1>Item adicionado ao carrinho com sucesso!</h1>
 <%= simple_form_for [@product, @order] do |f| %>
-<%= f.submit class: "btn btn-primary mt-4" %>
+<%= f.submit 'Finalizar Compra', class: "btn btn-primary mt-4" %>
 <% end %>
+</div>

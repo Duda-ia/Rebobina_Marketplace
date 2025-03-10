@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.product = @product
     if @order.save
+      flash[:notice] = "Compra realizada com sucesso!!"
       redirect_to products_path
     else
       render :new, status: :unprocessable_entity

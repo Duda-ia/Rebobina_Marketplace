@@ -31,7 +31,7 @@
   <section class="products-section">
     <div class="products-grid">
       <% @products.each do |product| %>
-        <div class="product-card pixel-border">
+        <div class="product-card">
           <div class="product-image">
             <% if product.photo.attached? %>
               <%= image_tag product.image, alt: product.name %>
@@ -47,7 +47,7 @@
             <span class="currency">R$</span>
             <%= product.price %>
           </p>
-          <%= link_to 'comprar agora', product_path(product), class: 'add-to-cart' %>
+          <%= link_to 'comprar', product_path(product), class: 'button-card' %>
         </div>
       <% end %>
     </div>

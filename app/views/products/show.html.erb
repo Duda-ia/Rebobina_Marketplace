@@ -1,17 +1,42 @@
 
 <%# <div class="container">
-  <p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %>
+  <%# </p> %>
   <%# <%= render @product %>
   <%# <%= link_to "edit", edit_product_path(@product) %>
-  <%# <%= button_to "Deletar", product_path(@product), method: :delete, data: { confirm: "Tem certeza?" }%> %>
+  <%# <%= button_to "Deletar", product_path(@product), method: :delete, data: { confirm: "Tem certeza?" }%>
 <%# </div> %>
 
 <!-- app/views/products/_product.html.erb -->
 
 <!-- app/views/products/show.html.erb -->
+<div class="product-card">
+  <!-- Coluna da imagem -->
+  <div class="product-image-col">
+    <% if @product.image.attached? %>
+      <%= image_tag @product.image, alt: @product.name %>
+    <% else %>
+      <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= @product.name %>" />
+    <% end %>
+  </div>
 
-<%= render "shared/product", product: @product %>
+  <!-- Coluna das infos (título, preço, descrição, etc.) -->
+  <div class="product-info-col">
+    <h3 class="product-title"><%= @product.name %></h3>
+    <p class="product-price">
+      <strong>Preço:</strong> <%= number_to_currency(@product.price) %>
+    </p>
+    <p class="product-description"><%= @product.description %></p>
 
-<%= link_to "Voltar para home", products_path, class: 'add-to-cart' %>
+     <%= link_to "Comprar", new_product_order_path(@product), class: 'button-card'  %>
 
-<%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
+    <!-- Se quiser um campo QTD e um botão comprar:
+    <div class="purchase-box">
+      <label>QTD:
+        <input type="number" min="1" value="1" />
+      </label>
+      <button>adicionar ao carrinho</button>
+    </div>
+    -->
+  </div>
+</div>
