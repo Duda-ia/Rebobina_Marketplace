@@ -50,11 +50,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  def photo_params
+    params.require(:product).permit(:title, :body, :photo)
+  end
+
   private
 
   def product_params
-    params.require(:product).permit(:category, :name, :description, :price)
+    params.require(:product).permit(:name, :description, :price)
   end
+  #insert :category above
 
   def set_product
     @product = Product.find(params[:id])
