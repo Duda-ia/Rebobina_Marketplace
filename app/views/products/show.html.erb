@@ -10,8 +10,6 @@
 
 <!-- app/views/products/show.html.erb -->
 
-<h1>Detalhes do Produto</h1>
-
 <%= render "shared/product", product: @product %>
 
-<%= link_to "Voltar para home", root_path %>
+<%= link_to "Voltar para home", products_path, class: 'add-to-cart' %>

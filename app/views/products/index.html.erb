@@ -35,35 +35,32 @@
       </div>
     </div>
   </section>
- <main>
-    <section class="products-section">
-      <div class="products-grid">
-        <% @products.each do |product| %>
-          <div class="product-card pixel-border">
-            <div class="product-image">
-              <% if product.image.attached? %>
-                <%= image_tag product.image, alt: product.name %>
-              <% else %>
-                <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
-              <% end %>
-            </div>
-
-            <h3 class="product-title">
-              <%= product.name %>
-            </h3>
-            <p class="product-price">
-              <!-- Example currency sign. Adjust to your real data -->
-              <span class="currency">R$</span>
-              <%= product.price %>
-            </p>
-            <button class="add-to-cart">
-              comprar agora
-            </button>
+<main>
+  <section class="products-section">
+    <div class="products-grid">
+      <% @products.each do |product| %>
+        <div class="product-card pixel-border">
+          <div class="product-image">
+            <% if product.image.attached? %>
+              <%= image_tag product.image, alt: product.name %>
+            <% else %>
+              <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
+            <% end %>
           </div>
-        <% end %>
-      </div>
-    </section>
-  </main>
+
+          <h3 class="product-title">
+            <%= product.name %>
+          </h3>
+          <p class="product-price">
+            <span class="currency">R$</span>
+            <%= product.price %>
+          </p>
+          <%= link_to 'comprar agora', product_path(product), class: 'add-to-cart' %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</main>
 
 
 </body>
