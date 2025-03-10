@@ -1,8 +1,9 @@
 .product-card {
   // display: flex;
   /* em vez de "max-width: 800px", use: */
-  width: 50%;            /* 70% da largura da tela, por exemplo */
-  margin: 2rem auto;     /* centraliza horizontalmente e dá espaçamento vertical */
+  // width: 50%;            /* 70% da largura da tela, por exemplo */
+  margin-left: 5%;
+  margin-right: 5%;     /* centraliza horizontalmente e dá espaçamento vertical */
   border: 2px solid #000;
   box-shadow: 6px 6px 0 #000;
   background: #fff;
