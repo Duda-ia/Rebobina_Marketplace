@@ -3,8 +3,9 @@
 require "open-uri"  # Needed if attaching images from a URL
 
 # 1) Destroy existing records in a safe order
-Product.destroy_all
-User.destroy_all
+  Order.destroy_all
+  Product.destroy_all
+  User.destroy_all
 
 # 2) Create 20 Users (Devise requires real passwords)
 users = User.create!([
