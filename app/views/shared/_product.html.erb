@@ -1,0 +1,27 @@
+<div class="product-card">
+  <!-- Coluna da imagem -->
+  <div class="product-image-col">
+    <% if product.image.attached? %>
+      <%= image_tag product.image, alt: product.name %>
+    <% else %>
+      <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
+    <% end %>
+  </div>
+
+  <!-- Coluna das infos (título, preço, descrição, etc.) -->
+  <div class="product-info-col">
+    <h3 class="product-title"><%= product.name %></h3>
+    <p class="product-price">
+      <strong>Preço:</strong> <%= number_to_currency(product.price) %>
+    </p>
+    <p class="product-description"><%= product.description %></p>
+    <!-- Se quiser um campo QTD e um botão comprar:
+    <div class="purchase-box">
+      <label>QTD:
+        <input type="number" min="1" value="1" />
+      </label>
+      <button>adicionar ao carrinho</button>
+    </div>
+    -->
+  </div>
+</div>
