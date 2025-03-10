@@ -50,6 +50,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def photo_params
+    params.require(:product).permit(:title, :body, :photo)
+  end
+
   private
 
   def product_params

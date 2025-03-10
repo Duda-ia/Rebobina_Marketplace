@@ -13,3 +13,5 @@
 <%= render "shared/product", product: @product %>
 
 <%= link_to "Voltar para home", products_path, class: 'add-to-cart' %>
+
+<%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>

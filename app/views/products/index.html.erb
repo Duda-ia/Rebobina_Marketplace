@@ -41,7 +41,7 @@
       <% @products.each do |product| %>
         <div class="product-card pixel-border">
           <div class="product-image">
-            <% if product.image.attached? %>
+            <% if product.photo.attached? %>
               <%= image_tag product.image, alt: product.name %>
             <% else %>
               <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
@@ -61,10 +61,11 @@
     </div>
   </section>
 </main>
+<%= cl_image_tag("1200px-Vinilos_distintos_tama_C3_B1os_whfene") %>
+<%# <%= cl_image_tag("IMAGE_WITH_FACE_ID", width: 150, height: 150, crop: :thumb, gravity: :face) %> 
 
+</div>
 
-</body>
-</html>
 </body>
 </html>
 
