@@ -1,11 +1,14 @@
 class OrdersController < ApplicationController
-  def index
+
+
+  def buyer_products
   end
 
   def new
     @product = Product.find(params[:product_id])
     @order = Order.new
   end
+
 
   def create
     @product = Product.find(params[:product_id])
