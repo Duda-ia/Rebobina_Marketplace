@@ -4,6 +4,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:query].present?
+    @products = @products.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def edit
