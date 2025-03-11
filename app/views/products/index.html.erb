@@ -1,31 +1,34 @@
 
+
   <!-- Destaques section -->
-  <section class="section-wrapper destaque-section">
-    <h2 class="section-title">Top Picks</h2>
+<section class="section-wrapper destaque-section">
+  <h2 class="section-title">Top Picks</h2>
     <div class="featured-albums">
       <img src="https://www.udiscovermusic.com/wp-content/uploads/2020/08/Lost-Berlin-820x820.jpg" alt="Ella Fitzgerald album" />
       <img src="https://m.media-amazon.com/images/I/811qGlvATJL._UF1000,1000_QL80_.jpg" alt="The Beatles album" />
     </div>
-  </section>
+</section>
 <div>
   <!-- Categories section  -->
   <%= render "shared/categories" %>
 </div>
 
-  <div>
-    <%= render "shared/novidades" %>
-  </div>
+<div>
+  <%= render "shared/novidades" %>
+</div>
 
   <!-- Big Image & Quote -->
-  <section class="section-wrapper split-section">
-    <div class="quote-box">
-      <div>
-        <blockquote>
-          “Vinyl is an art form. You can take the record, put it on your turntable, and listen to the music, but you can also look at the cover design, read the lyrics, and really engage with what's happening there. It's not just about listening to the music, it's about the whole experience.”
-        </blockquote>
-        <div class="author">Jack White — Singer e Composer</div>
-      </div>
+<section class="section-wrapper split-section">
+  <div class="quote-box">
+    <div>
+      <blockquote>
+        “Vinyl is an art form. You can take the record, put it on your turntable, and listen to the music, but you can also look at the cover design, read the lyrics, and really engage with what's happening there. It's not just about listening to the music, it's about the whole experience.”
+      </blockquote>
+       <div class="author">
+          Jack White — Singer e Composer
+        </div>
     </div>
+  </div>
   </section>
 <main>
   <section class="products-section">
@@ -33,11 +36,17 @@
       <% @products.each do |product| %>
         <div class="product-card">
           <div class="product-image">
-            <% if product.image.attached? %>
-              <%= image_tag product.image, alt: product.name %>
-            <% else %>
-              <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
-            <% end %>
+              <% if product.photo.attached? %>
+                <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
+              <% elsif product.category == "vinil" %>
+                <%= image_tag("vinil") %>
+              <% elsif product.category == "cd" %>
+                <%= image_tag("cd") %>
+              <%# <% elsif product.category == "fita cassete" %>
+                <%# <%= image_tag("") %>
+              <% elsif product.category == "old stuff" %>
+                <%= image_tag("radio") %>
+              <% end %>
           </div>
 
           <h3 class="product-title">
@@ -56,7 +65,7 @@
 <%# <%= cl_image_tag("1200px-Vinilos_distintos_tama_C3_B1os_whfene") %>
 <%# <%= cl_image_tag("IMAGE_WITH_FACE_ID", width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
-</div>
+<%# </div> %>
 <%#
 <div class="container">
   <%# <h1>Products</h1>

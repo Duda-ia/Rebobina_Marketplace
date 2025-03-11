@@ -1,15 +1,20 @@
-<div class="categories-container">
-  <div class="category-box" style="background: #564dfe; color: #fff;">
+
+
+<div class="categories-container" data-controller="filter">
+  <%= link_to categories_path, class: "category-box vinil", style: "background-color: #7209B7;", data: { action: "click->filter#click", filter_target: "vinil" } do %>
     Vinil
-  </div>
-  <div class="category-box" style="background: #8492c4; color: #fff;">
+  <% end %>
+
+  <%= link_to categories_path, class: "category-box cassete", style: "background-color: #4895EF;", data: { action: "click->filter#click", filter_target: "cassete" } do %>
     Cassete
-  </div>
-  <div class="category-box" style="background: #ec5ac9; color: #fff;">
+  <% end %>
+
+  <%= link_to categories_path, class: "category-box cd", style: "background-color: #F72585;", data: { action: "click->filter#click", filter_target: "cd" } do %>
     CD
-  </div>
-  <div class="category-box" style="background: #ffec57; color: #000;">
+  <% end %>
+
+  <%= link_to categories_path, class: "category-box old-stuff", style: "background-color: #FEF125;", data: { action: "click->filter#click", filter_target: "old-stuff" } do %>
     Old Stuff
-  </div>
+  <% end %>
 </div>
 

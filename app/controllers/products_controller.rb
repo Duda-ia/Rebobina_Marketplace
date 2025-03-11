@@ -58,6 +58,15 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:title, :body, :image)
   end
 
+  def categories
+    search_params = params[:category]
+    if search_params.present?
+      @products = Product.where(category: search_params)
+    else
+      @products = Product.all
+    end
+  end
+
   def seller_products
     # @user = current_user.id
     # @seller_products = Product.all.where(params[@user])
@@ -67,9 +76,8 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price)
+    params.require(:product).permit(:name, :description, :category, :price, :photo)
   end
-  #insert :category above
 
   def set_product
     @product = Product.find(params[:id])
