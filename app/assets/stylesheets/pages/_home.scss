@@ -68,6 +68,7 @@ p{
   display: flex;
   gap: 2rem;
   justify-content: center;
+  text-decoration: none;
 }
 
 .news-container{
@@ -89,9 +90,9 @@ p{
   justify-content: center;
   font-family: 'Press Start 2P', sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
+  color: black;
 }
-
-
 
 /* Novidades (New Arrivals) */
 .products-grid {
