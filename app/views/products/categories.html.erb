@@ -1,3 +1,43 @@
+<div class="categories-container">
+  <div class="categories-menu">
+    <h3>Categories</h3>
+
+    <% if @categories.present? %>
+      <% @categories.each do |category| %>
+        <%= link_to category, categories_path(category: category), class: "category-link" %>
+      <% end %>
+    <% else %>
+      <p>No categories available.</p>
+    <% end %>
+  </div>
+</div>
+
+<!-- Additional Products Grid Section (Optional) -->
+<section class="products-section">
+  <div class="products-grid">
+    <% @products.each do |product| %>
+      <div class="product-card" data-filter-target="card" data-category="<%= product.category %>">
+        <div class="product-image">
+          <% if product.image.attached? %>
+            <%= image_tag product.image, alt: product.name %>
+          <% else %>
+            <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
+          <% end %>
+        </div>
+
+        <h3 class="product-title">
+          <%= product.name %>
+        </h3>
+        <p class="product-price">
+          <span class="currency">R$</span>
+          <%= product.price %>
+        </p>
+        <%= link_to 'comprar', product_path(product), class: 'button-card' %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
 <%#
 <section class="section-wrapper destaque-section">
     <h2 class="section-title">Antes de mais nada,
@@ -36,4 +76,4 @@
   <%= class="category-box" style="background: #ffec57; color: #000;" %>
     <%# Old Stuff %>
   <%# </div>
-</div> %> 
+</div> %>
