@@ -13,11 +13,17 @@
 <div class="product-card single">
   <!-- Coluna da imagem -->
   <div class="product-image-col">
-    <% if @product.image.attached? %>
-      <%= image_tag @product.image, alt: @product.name %>
-    <% else %>
-      <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= @product.name %>" />
-    <% end %>
+    <% if product.photo.attached? %>
+    <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
+      <% elsif product.category == "vinil" %>
+      <%= image_tag("vinil") %>
+        <% elsif product.category == "cd" %>
+          <%= image_tag("cd") %>
+          <%# <% elsif product.category == "fita cassete" %>
+          <%# <%= image_tag("") %>
+          <% elsif product.category == "old stuff" %>
+            <%= image_tag("radio") %>
+        <% end %>
   </div>
 
   <!-- Coluna das infos (título, preço, descrição, etc.) -->
