@@ -1,0 +1,31 @@
+
+.footer {
+  font-family: 'Press Start 2P', cursive;
+  background-color: black;
+  color: white;
+  padding: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 50px;
+}
+
+.logo-font {
+  padding: 40px;
+  height: 100px;
+}
+.custom-footer-text {
+  font-size: 10px;
+  font-weight: 100;
+  color: gray;
+  margin-top: 70px;
+}
+
+  .social-icons {
+    // gap: 15px;
+    // padding: 80px;
+    // height: 200px;
+    align-items: center;
+  }

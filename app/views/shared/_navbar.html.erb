@@ -1,17 +1,27 @@
 
 <div class="navbar-container">
-  <div class="logo">REBOBINA</div>
+  <div class="logo"><%= link_to "REBOBINA", products_path %></div>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Search..." />
+  <div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
   </div>
+  </div>
+
 
   <nav class="nav-links">
     <% if user_signed_in? %>
       <%= link_to "Home", products_path %>
       <%= link_to "Categories", products_path %>
       <%= link_to "Sell", new_product_path %>
-      <%= link_to "My Board", products_path %>
+      <%= link_to "My Board", seller_products_path %>
       <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
     <% else %>
       <%= link_to "Home", products_path %>

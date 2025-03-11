@@ -9,10 +9,11 @@
   font-family: 'Press Start 2P', sans-serif; // se quiser fonte pixel
 }
 
-.logo {
+.logo  a{
   font-size: 1.5rem;
-  font-weight: bold;
   // Se quiser a logo sempre à esquerda, e o restante “empurrado” para a direita, poderia usar margin-right: auto;
+  color: #000;
+  text-decoration: none;
 }
 
 .search-bar {

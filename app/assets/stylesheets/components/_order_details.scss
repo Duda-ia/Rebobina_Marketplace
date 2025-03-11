@@ -1,0 +1,167 @@
+/* Container */
+.container {
+  // display: flex;
+  // justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  width: 100%;
+  max-width: 1600px;
+  // margin: 0 auto;
+  // padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Content */
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Box Styles */
+.left-box, .middle-box, .right-box {
+  border-radius: 10px;
+  border: 4px solid black;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Left Box */
+.left-box {
+  width: 190px;
+  height: 500px;
+  flex-direction: column;
+}
+
+/* Middle Box */
+.middle-box {
+  width: 476px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Right Box */
+.right-box {
+  width: 360px;
+  height: 500px;
+  flex-direction: column;
+}
+
+/* Images */
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image {
+  width: 148px;
+  height: 148px;
+  margin-bottom: 10px;
+}
+
+.images .image:last-child{
+  margin-bottom: 0;
+}
+
+/* Main Image */
+.main-image {
+  width: 418px;
+  height: 415px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Purple Box */
+.color-box {
+  width: 446px;
+  height: 480px;
+  background: #E67E22;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Text */
+.title, .price, .shipping {
+  color: black;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+}
+
+.title{
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.description{
+  text-align: left;
+}
+
+.product-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  margin: 20px;
+}
+.product-info p{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.price{
+  text-align: right;
+  margin-right: 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+
+.text, .shipping {
+  color: black;
+  font-family: "Space Grotesk";
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+
+
+.add-to-cart {
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: block;
+}
+
+.add-to-cart a {
+  text-decoration: none !important; /* Forçando pra realizar as alterações */
+  color: white !important;
+  display: block !important;
+}
