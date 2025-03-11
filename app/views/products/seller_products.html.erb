@@ -1,0 +1,42 @@
+<%# <% raise %>
+<% unless @my_products.empty? %>
+
+  <div class="container">
+    <h1>My Products</h1>
+      <div class="products-grid">
+
+        <% @my_products.each do |product| %>
+          <div class="product-card">
+            <div class="product-image">
+              <% if product.image.attached? %>
+                <%= image_tag product.image, alt: product.name %>
+              <% else %>
+                <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
+              <% end %>
+            </div>
+
+            <h3 class="product-title">
+              <%= product.name %>
+            </h3>
+            <p class="product-price">
+              <span class="currency">R$</span>
+                <%= product.price %>
+            </p>
+            <div class="format-edit-delete-icons">
+              <%= link_to 'edit', edit_product_path(product), class: 'button-card button-icon' %>
+              <%= link_to product_path(product), class: "button-card trash-incon", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  do %>
+                <i class="fa-solid fa-trash-can"></i>
+              <% end %>
+              <%# <%= link_to 'delete', edit_product_path(product), class: 'button-card button-icon' %>
+              </div>
+          </div>
+
+        <% end %>
+
+        <%# <%= cl_image_tag("1200px-Vinilos_distintos_tama_C3_B1os_whfene") %>
+        <%# <%= cl_image_tag("IMAGE_WITH_FACE_ID", width: 150, height: 150, crop: :thumb, gravity: :face) %> 
+<% else %>
+  <h1>You don't have any products yet.</h1>
+<% end %>
+      </div>
+  </div>
