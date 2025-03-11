@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to products_path
+      redirect_to  seller_products_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
     @product.user = current_user
     if @product.save
       # raise
-      redirect_to products_path
+      redirect_to seller_products_path
     else
       # raise
       render :new, status: :unprocessable_entity
@@ -44,9 +44,10 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product = Product.find(params[:id])
     if @product.destroy
       flash[:notice] = "Produto removido com sucesso."
-      redirect_to products_path
+      redirect_to seller_products_path
     else
       flash[:alert] = "Erro ao remover o produto."
       redirect_back fallback_location: products_path
@@ -55,6 +56,12 @@ class ProductsController < ApplicationController
 
   def image_params
     params.require(:product).permit(:title, :body, :image)
+  end
+
+  def seller_products
+    # @user = current_user.id
+    # @seller_products = Product.all.where(params[@user])
+    @my_products = Product.where(user: current_user)
   end
 
   private
