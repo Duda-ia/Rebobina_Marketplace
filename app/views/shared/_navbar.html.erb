@@ -1,7 +1,10 @@
 
 <div class="navbar-container">
-  <div class="logo">REBOBINA
-</div>
+  <div class="logo"><%= link_to "REBOBINA", products_path %></div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." />
+  
   <div class="row justify-content-center">
   <div class="col-sm-8 my-3">
     <%= form_with url: products_path, method: :get, class: "d-flex" do %>
