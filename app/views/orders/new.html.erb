@@ -1,14 +1,8 @@
-<div class="container mt-5 ">
-  <div class="card shadow-sm" style="max-width: 500px; margin: 0 auto; padding: 20px;">
-    <div class="card-header text-center" >
-      <h4>Item adicionado ao carrinho com sucesso!</h4>
-    </div>
-    <div class="card-body" style="padding-top: 20px">
-      <%= simple_form_for [@product, @order] do |f| %>
-        <div class="form-group text-center" style="margin-top: 20px;">
-          <h4><%= f.submit 'Finalizar Compra', class: "btn btn-primary button-card" %></h4>
+<div class="product-form-container">
+  <h4>Item successfully added to cart :)</h4>
+    <%= simple_form_for [@product, @order] do |f| %>
+      <div class="form-group text-center">
+          <h4><%= f.submit 'Complete Purchase', class: "btn btn-primary button-card" %></h4>
         </div>
       <% end %>
     </div>
-  </div>
-</div>

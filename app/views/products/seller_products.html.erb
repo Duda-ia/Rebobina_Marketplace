@@ -2,8 +2,9 @@
 <% unless @my_products.empty? %>
 
   <div class="container">
+    <br>
     <h1>My Products</h1>
-      <div class="products-grid">
+      <div class="products-grid mb-5">
 
         <% @my_products.each do |product| %>
           <div class="product-card">
@@ -38,10 +39,9 @@
           </div>
 
         <% end %>
-<% else %>
-  <h1 class="far-footer">You don't have any products yet.
-
-  </h1>
-<% end %>
       </div>
   </div>
+<% else %>
+<br>
+  <h1>You don't have any products yet.</h1>
+<% end %>

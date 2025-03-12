@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["vinyl", "cassette", "old-stuff", "cd"]
 
   connect() {
-    console.log("Hello from our first Stimulus controller");
+    // console.log("Hello from our first Stimulus controller");
   }
 
   click(event) {

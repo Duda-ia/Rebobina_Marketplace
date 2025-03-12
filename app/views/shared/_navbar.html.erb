@@ -8,9 +8,11 @@
         <%= text_field_tag :query,
               params[:query],
               class: "form-control my-1 ",
-              placeholder: "Thriller - Michael Jackson"
+              placeholder: "Thriller"
           %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary ms-4" %>
+          <div>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary ms-4"%>
+          </div>
     <% end %>
   </div>
   </div>
