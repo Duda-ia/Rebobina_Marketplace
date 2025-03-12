@@ -3,6 +3,7 @@ body {
   background: #fafafa;
   color: #333;
   font-family: 'Space Grotesk', sans-serif;
+  // min-height: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -15,11 +16,12 @@ p{
 
  main, footer {
   display: block;
+  margin-top: auto;
 }
 
 /* Sections */
 .section-wrapper {
-  padding: 2rem;
+  // padding: 2rem;
   border-bottom: 2px solid #000;
 }
 .section-title {
@@ -33,7 +35,7 @@ p{
   text-transform: uppercase;
   text-align: center;
   /* se quiser remover sublinhado de “h2” no user-agent styles: */
-  margin-bottom: 1rem;
+  margin: 1rem;
   box-shadow: 4px 4px 0 #000;
   border: 2px solid #000;
   text-align: center;
@@ -45,7 +47,7 @@ p{
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 2rem;
 }
 .featured-albums img {
   max-width: 500px;
@@ -131,6 +133,7 @@ p{
   cursor: pointer;
   text-decoration: none;
   color: black;
+  font-family: inherit;
 }
 
 /* Split Section with Vinyl Photo & Quote */
