@@ -11,13 +11,13 @@
               <% if product.photo.attached? %>
                 <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
               <% elsif product.category == "vinil" %>
-                <%= image_tag("vinil") %>
+                <%= image_tag("vinil.jpg") %>
               <% elsif product.category == "cd" %>
-                <%= image_tag("cd") %>
+                <%= image_tag("cd.jpg") %>
               <% elsif product.category == "fita cassete" %>
-                <%= image_tag("cassete") %>
+                <%= image_tag("cassete.jpg") %>
               <% elsif product.category == "old stuff" %>
-                <%= image_tag("radio") %>
+                <%= image_tag("radio.jpg") %>
               <% end %>
 
             </div>
