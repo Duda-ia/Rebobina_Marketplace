@@ -3,14 +3,22 @@
     <div class="left-box">
       <div class="border"></div>
       <div class="images">
-        <%= image_tag @product.image, alt: "Image 1", class: "image" %>
-        <%= image_tag @product.image, alt: "Image 2", class: "image" %>
-        <%= image_tag @product.image, alt: "Image 3", class: "image" %>
-      </div>
+  <% if @product.photo.attached? %>  <!-- Verifica se a foto está anexada -->
+    <%= image_tag @product.photo, alt: "Image 1", class: "image" %>
+    <%= image_tag @product.photo, alt: "Image 2", class: "image" %>
+    <%= image_tag @product.photo, alt: "Image 3", class: "image" %>
+  <% else %>
+    <p>No image available</p> <!-- Exibe uma mensagem alternativa caso não haja imagem -->
+  <% end %>
+</div>
     </div>
     <div class="middle-box">
       <div class="color-box"></div>
-      <%= image_tag @product.image, alt: "Main Image", class: "main-image" %>
+      <% if @product.photo.attached? %>
+      <%= image_tag @product.photo, alt: "Main Image", class: "main-image" %>
+    <% else %>
+    <p>No image available</p> <!-- Exibe uma mensagem alternativa caso não haja imagem -->
+  <% end %>
     </div>
     <div class="right-box">
         <div class="product-info">
