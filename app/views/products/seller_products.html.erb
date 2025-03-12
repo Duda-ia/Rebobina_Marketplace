@@ -4,7 +4,6 @@
   <div class="container">
     <h1>My Products</h1>
       <div class="products-grid">
-
         <% @my_products.each do |product| %>
           <div class="product-card">
             <div class="product-image">
@@ -18,7 +17,7 @@
                 <%= image_tag("cassete.jpg") %>
               <% elsif product.category == "Old Stuff" %>
                 <%= image_tag("radio.jpg") %>
-              <% end %>
+        <% end %>
 
             </div>
             <h3 class="product-title">
