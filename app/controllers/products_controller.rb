@@ -4,8 +4,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @new_arrivals = [@products[-1], @products[-2], @products[-3]]
     if params[:query].present?
-    @products = @products.where("name ILIKE ?", "%#{params[:query]}%")
+      @products = @products.where("name ILIKE ?", "%#{params[:query]}%")
     end
   end
 
