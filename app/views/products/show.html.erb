@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container-details">
   <div class="content">
     <div class="left-box">
       <div class="border"></div>
-      <div class="images">
+      <div class="images-details">
   <% if @product.photo.attached? %>  <!-- Verifica se a foto está anexada -->
-    <%= image_tag @product.photo, alt: "Image 1", class: "image" %>
-    <%= image_tag @product.photo, alt: "Image 2", class: "image" %>
-    <%= image_tag @product.photo, alt: "Image 3", class: "image" %>
+    <%= image_tag @product.photo, alt: "Image 1", class: "image-details" %>
+    <%= image_tag @product.photo, alt: "Image 2", class: "image-details" %>
+    <%= image_tag @product.photo, alt: "Image 3", class: "image-details" %>
   <% else %>
-    <p>No image available</p> <!-- Exibe uma mensagem alternativa caso não haja imagem -->
+    <p>No image available</p>
   <% end %>
 </div>
     </div>
@@ -17,7 +17,7 @@
       <% if @product.photo.attached? %>
       <%= image_tag @product.photo, alt: "Main Image", class: "main-image" %>
     <% else %>
-    <p>No image available</p> <!-- Exibe uma mensagem alternativa caso não haja imagem -->
+    <p>No image available</p>
   <% end %>
     </div>
     <div class="right-box">
@@ -25,7 +25,7 @@
         <h3 class="title"><%= @product.name %></h3>
         <div class="description"><%= @product.description %>
         </p>
-        <p class="price">
+        <p class="price-details">
           <%= number_to_currency(@product.price) %>
         </p>
         <div class="add-to-cart">
