@@ -41,6 +41,12 @@ p{
   text-align: center;
 }
 
+.centralized-container{
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  margin-top: 30px;
+}
 
 /* Destaque (featured) images */
 .featured-albums {
@@ -146,28 +152,3 @@ p{
   width: 50%;
   border: 2px solid #000;
 }
-.quote-box {
-  //inicio das modificações provisórias do card
-  margin-left: 25%;
-  // fim das modificações provisórias
-
-
-  width: 50%;
-  background: #b2e4e0; /* a mint/teal color to highlight text */
-  padding: 2rem;
-  border: 2px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.quote-box blockquote {
-  font-style: italic;
-  margin: 10px;
-}
-.quote-box .author {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-// Quote provisório
