@@ -42,8 +42,8 @@
                 <%= image_tag("vinil") %>
               <% elsif product.category == "cd" %>
                 <%= image_tag("cd") %>
-              <%# <% elsif product.category == "fita cassete" %>
-                <%# <%= image_tag("") %>
+              <% elsif product.category == "fita cassete" %>
+                <%= image_tag("cassete") %>
               <% elsif product.category == "old stuff" %>
                 <%= image_tag("radio") %>
               <% end %>
@@ -62,8 +62,6 @@
     </div>
   </section>
 </main>
-<%# <%= cl_image_tag("1200px-Vinilos_distintos_tama_C3_B1os_whfene") %>
-<%# <%= cl_image_tag("IMAGE_WITH_FACE_ID", width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
 <%# </div> %>
 <%#
