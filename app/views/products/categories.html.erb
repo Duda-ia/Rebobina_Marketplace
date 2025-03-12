@@ -18,8 +18,8 @@
     <% @products.each do |product| %>
       <div class="product-card" data-filter-target="card" data-category="<%= product.category %>">
         <div class="product-image">
-          <% if product.image.attached? %>
-            <%= image_tag product.image, alt: product.name %>
+          <% if product.photo.attached? %>
+            <%= image_tag product.photo, alt: product.name %>
           <% else %>
             <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
           <% end %>
