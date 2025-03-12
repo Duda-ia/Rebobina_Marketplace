@@ -10,14 +10,14 @@
             <div class="product-image">
               <% if product.photo.attached? %>
                 <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
-              <% elsif product.category == "vinil" %>
-                <%= image_tag("vinil") %>
-              <% elsif product.category == "cd" %>
-                <%= image_tag("cd") %>
-              <% elsif product.category == "fita cassete" %>
-                <%= image_tag("cassete") %>
-              <% elsif product.category == "old stuff" %>
-                <%= image_tag("radio") %>
+              <% elsif product.category == "Vinyl" %>
+                <%= image_tag("vinil.jpg") %>
+              <% elsif product.category == "CD" %>
+                <%= image_tag("cd.jpg") %>
+              <% elsif product.category == "Cassette" %>
+                <%= image_tag("cassete.jpg") %>
+              <% elsif product.category == "Old Stuff" %>
+                <%= image_tag("radio.jpg") %>
               <% end %>
 
             </div>
@@ -39,7 +39,9 @@
 
         <% end %>
 <% else %>
-  <h1>You don't have any products yet.</h1>
+  <h1 class="far-footer">You don't have any products yet.
+
+  </h1>
 <% end %>
       </div>
   </div>
