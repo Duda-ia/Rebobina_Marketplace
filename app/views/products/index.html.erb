@@ -8,12 +8,12 @@
 
     <!-- Imagem de Nina Simone, chamando a imagem diretamente da pasta de assets -->
     <%= link_to product_path(1) do %>
-      <img src="<%= asset_path('vinyl_nina') %>" alt="Nina Simone Album" />
+      <%= image_tag('vinyl_nina.webp') %>
     <% end %>
 
     <!-- Imagem de Michael Jackson, chamando a imagem diretamente da pasta de assets -->
     <%= link_to product_path(2) do %>
-      <img src="<%= asset_path('vinyl_michael') %>" alt="Michael Jackson Album" />
+      <%= image_tag('vinyl_michael.webp') %>
     <% end %>
 
   </div>
