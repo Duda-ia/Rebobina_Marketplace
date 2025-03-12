@@ -4,12 +4,21 @@
   <div class="search-home">
 <section class="section-wrapper destaque-section">
   <h2 class="section-title">Top Picks</h2>
-    <div class="featured-albums">
+  <div class="featured-albums">
 
-      <img src="https://www.udiscovermusic.com/wp-content/uploads/2020/08/Lost-Berlin-820x820.jpg" alt="Ella Fitzgerald album" />
-      <img src="https://m.media-amazon.com/images/I/811qGlvATJL._UF1000,1000_QL80_.jpg" alt="The Beatles album" />
+    <!-- Imagem de Nina Simone, chamando a imagem diretamente da pasta de assets -->
+    <%= link_to product_path(1) do %>
+      <img src="<%= asset_path('vinyl_nina') %>" alt="Nina Simone Album" />
+    <% end %>
 
-    </div>
+    <!-- Imagem de Michael Jackson, chamando a imagem diretamente da pasta de assets -->
+    <%= link_to product_path(2) do %>
+      <img src="<%= asset_path('vinyl_michael') %>" alt="Michael Jackson Album" />
+    <% end %>
+
+  </div>
+</section>
+
 </section>
 <div>
   <!-- Categories section  -->

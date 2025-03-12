@@ -16,6 +16,10 @@
   text-decoration: none;
 }
 
+.logo{
+  margin-right: 2%;
+}
+
 .form-control {
   flex: 1;   // Faz a barra de busca ocupar todo o espaço restante no meio
   display: flex;
@@ -31,6 +35,7 @@
 .nav-links {
   display: flex;
   gap: 1rem;
+  margin-left: 5%;
 
   a {
     text-decoration: none;
@@ -47,21 +52,22 @@
 /* Navbar Styling */
 .nav-links {
   display: flex;
-  gap: 20px;
+  // gap: 20px;
   align-items: center;
 }
 
 /* Styling the dropdown button */
 .dropdown-toggle {
-  background-color: #007bff;
+  // background-color: #007bff;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  // padding: 10px 20px;
+  // border-radius: 5px;
   font-size: 16px;
 }
 
 .dropdown-toggle:hover {
-  background-color: #0056b3;
+  // background-color: #0056b3;
+  color: #000;
 }
 
 /* Dropdown menu styling */
@@ -76,4 +82,14 @@
 
 .dropdown-item:hover {
   background-color: #f0f0f0;
+}
+
+#categoryDropdown{
+  background-color: white;
+  border-color: #000;
+}
+
+
+.btn-primary:hover{
+ border-color: black;
 }
