@@ -4,8 +4,10 @@
 <section class="section-wrapper destaque-section">
   <h2 class="section-title">Top Picks</h2>
     <div class="featured-albums">
+
       <img src="https://www.udiscovermusic.com/wp-content/uploads/2020/08/Lost-Berlin-820x820.jpg" alt="Ella Fitzgerald album" />
       <img src="https://m.media-amazon.com/images/I/811qGlvATJL._UF1000,1000_QL80_.jpg" alt="The Beatles album" />
+
     </div>
 </section>
 <div>
@@ -53,10 +55,10 @@
             <%= product.name %>
           </h3>
           <p class="product-price">
-            <span class="currency">R$</span>
+            <span class="currency">$</span>
             <%= product.price %>
           </p>
-          <%= link_to 'comprar', product_path(product), class: 'button-card' %>
+          <%= link_to 'buy', product_path(product), class: 'button-card' %>
         </div>
       <% end %>
     </div>

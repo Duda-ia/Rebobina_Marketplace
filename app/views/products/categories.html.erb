@@ -36,6 +36,31 @@
   </section>
 </div>
 
+<!-- Additional Products Grid Section (Optional) -->
+<section class="products-section">
+  <div class="products-grid">
+    <% @products.each do |product| %>
+      <div class="product-card" data-filter-target="card" data-category="<%= product.category %>">
+        <div class="product-image">
+          <% if product.photo.attached? %>
+            <%= image_tag product.photo, alt: product.name %>
+          <% else %>
+            <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
+          <% end %>
+        </div>
+
+        <h3 class="product-title">
+          <%= product.name %>
+        </h3>
+        <p class="product-price">
+          <span class="currency">R$</span>
+          <%= product.price %>
+        </p>
+        <%= link_to 'comprar', product_path(product), class: 'button-card' %>
+      </div>
+    <% end %>
+  </div>
+</section>
 
 <%#
 <section class="section-wrapper destaque-section">
