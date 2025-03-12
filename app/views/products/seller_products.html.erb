@@ -10,13 +10,13 @@
             <div class="product-image">
               <% if product.photo.attached? %>
                 <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
-              <% elsif product.category.downcase == "vinyl" %>
+              <% elsif product.category == "Vinyl" %>
                 <%= image_tag("vinil.jpg") %>
-              <% elsif product.category.downcase == "cd" %>
+              <% elsif product.category == "CD" %>
                 <%= image_tag("cd.jpg") %>
-              <% elsif product.category.downcase == "cassette" %>
+              <% elsif product.category == "Cassette" %>
                 <%= image_tag("cassete.jpg") %>
-              <% elsif product.category.downcase == "old stuff" %>
+              <% elsif product.category == "Old Stuff" %>
                 <%= image_tag("radio.jpg") %>
               <% end %>
 
