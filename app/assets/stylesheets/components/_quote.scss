@@ -1,0 +1,81 @@
+/* Container para o conteúdo de citação e imagem */
+.container-quote {
+  width: 100%;
+  margin-top: 30px; /* Espaço entre os outros containers */
+  padding: 20px 0;
+
+}
+
+/* Caixa de fundo */
+.background-box {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  background-color: #5EC9C4;
+  padding: 0;
+}
+
+/* Coluna da imagem */
+.image-column {
+  flex: 1; /* A coluna de imagem ocupará metade do espaço disponível */
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.image {
+
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  max-width: 743px;
+}
+
+/* Coluna do texto */
+.text-column {
+  flex: 1; /* A coluna de texto ocupará metade do espaço */
+  padding: 0 50px;
+  color: black;
+}
+
+/* Informações do autor */
+.author-info {
+  color: #04524d;
+  font-size: 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  font-style: italic;
+
+}
+
+/* Citação */
+.quote h6{
+  font-size: 18px;
+  font-family: 'Press Start 2P', sans-serif;
+  word-wrap: break-word;
+  width: 80%; /* Limita a largura do texto */
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Caixas coloridas */
+.box-1, .box-2 {
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  background: #00B8AC;
+}
+
+.box-1 {
+  left: 30px;
+  top: 30px;
+}
+
+.box-2 {
+  right: 30px;
+  top: 30px;
+}
