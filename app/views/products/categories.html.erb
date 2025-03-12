@@ -18,12 +18,10 @@
     </div>
 
 
-
-
-  <!-- Additional Products Grid Section (Optional) -->
+  <!-- Products Grid Section  -->
   <section class="products-section">
     <section class="category-title">
-      <h1> <%= params[:category] ? params[:category].capitalize : "All Categories" %></h1>
+      <h1> <%= params[:category] ? params[:category].capitalize : "all products" %></h1>
     <div class="products-grid">
       <% @products.each do |product| %>
         <div class="product-card" data-filter-target="card" data-category="<%= product.category %>">
@@ -42,7 +40,7 @@
             <span class="currency">R$</span>
             <%= product.price %>
           </p>
-          <%= link_to 'Comprar', product_path(product), class: 'button-card' %>
+          <%= link_to 'buy', product_path(product), class: 'button-card' %>
         </div>
       <% end %>
     </div>
