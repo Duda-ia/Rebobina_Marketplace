@@ -1,13 +1,13 @@
 /* Container */
-.container {
-  // display: flex;
-  // justify-content: center;
+.container-details {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  // height: 100vh;
+  height: 100vh;
   width: 100%;
   max-width: 1600px;
-  // margin: 0 auto;
-  // padding: 20px;
+  margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -59,7 +59,7 @@
 }
 
 /* Images */
-.images {
+.images-details {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,13 +67,13 @@
   height: 100%;
 }
 
-.image {
+.image-details {
   width: 148px;
   height: 148px;
   margin-bottom: 10px;
 }
 
-.images .image:last-child{
+.images-details .image-details:last-child{
   margin-bottom: 0;
 }
 
@@ -99,7 +99,7 @@
 }
 
 /* Text */
-.title, .price, .shipping {
+.title, .price-details, .shipping {
   color: black;
   font-family: "Press Start 2P";
   font-size: 16px;
@@ -128,7 +128,7 @@
   margin-top: 20px;
 }
 
-.price{
+.price-details{
   text-align: right;
   margin-right: 0;
   border-bottom: 1px solid black;
@@ -162,4 +162,10 @@
   text-decoration: none !important; /* Forçando pra realizar as alterações */
   color: white !important;
   display: block !important;
+}
+
+.far-footer{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
 }
