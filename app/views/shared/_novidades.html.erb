@@ -1,32 +1,30 @@
 <section class="section-wrapper destaque-section">
   <h2 class="section-title">New arrivals</h2>
     <div class="news-container">
-
-<% @new_arrivals.each do |product| %>
-<div class="product-card">
-  <div class="product-image">
-    <% if product.photo.attached? %>
-      <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
-        <% elsif product.category == "Vinyl" %>
-          <%= image_tag("vinil.jpg") %>
-        <% elsif product.category == "CD" %>
-          <%= image_tag("cd.jpg") %>
-        <% elsif product.category == "Cassette" %>
-          <%= image_tag("cassete.jpg") %>
-        <% elsif product.category == "Old Stuff" %>
-          <%= image_tag("radio.jpg") %>
-        <% end %>
-  </div>
-
-<h3 class="product-title">
-  <%= product.name %>
-  </h3>
-    <p class="product-price">
-     <span class="currency">$</span>
-      <%= product.price %>
-      </p>
-        <%= link_to 'buy', product_path(product), class: 'button-card' %>
-  </div>
+      <% @new_arrivals.each do |product| %>
+        <div class="product-card">
+          <div class="product-image">
+            <% if product.photo.attached? %>
+              <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
+                <% elsif product.category == "Vinyl" %>
+                  <%= image_tag("vinil.jpg") %>
+                <% elsif product.category == "CD" %>
+                  <%= image_tag("cd.jpg") %>
+                <% elsif product.category == "Cassette" %>
+                  <%= image_tag("cassete.jpg") %>
+                <% elsif product.category == "Old Stuff" %>
+                  <%= image_tag("radio.jpg") %>
+                <% end %>
+          </div>
+          <h3 class="product-title">
+            <%= product.name %>
+          </h3>
+          <p class="product-price">
+            <span class="currency">$</span>
+            <%= product.price %>
+          </p>
+          <%= link_to 'buy', product_path(product), class: 'button-card' %>
+        </div>
       <% end %>
     </div>
 </section>
