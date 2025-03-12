@@ -115,7 +115,7 @@ products.each_with_index do |product, i|
   image_url = "https://picsum.photos/seed/PRODUCT_#{i}/600/600"
 
   downloaded_image = URI.open(image_url)  # downloads image bytes
-  product.image.attach(
+  product.photo.attach(
     io:           downloaded_image,
     filename:     "product_#{i}.jpg",
     content_type: "image/jpeg"
