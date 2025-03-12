@@ -15,9 +15,25 @@
   <%= render "shared/categories" %>
 </div>
 
-<div>
-  <%= render "shared/novidades" %>
+ <div>
+   <%= render "shared/novidades" %>
 </div>
+
+<%# <section class="section-wrapper destaque-section">
+  <h2 class="section-title">New arrivals</h2>
+  <div class="news-container">
+    <div class="products-grid">
+      <% @new_arrivals.each do |product| %>
+        <%# <div class="product-card">
+          <img src="<%= product.photo_url %>
+          <%# <h3><%= product.name %>
+          <%# <div class="price">R$<%= product.price %>
+          <%# <%= button_to 'Comprar', product_path(product), method: :post, class: 'buy-button' %> x
+        <%# </div> %>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div>
+</section> %>
 
   <!-- Big Image & Quote -->
 <div class="container-quote">
