@@ -65,6 +65,8 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+  end
+
   def seller_products
     # @user = current_user.id
     # @seller_products = Product.all.where(params[@user])
