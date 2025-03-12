@@ -1,13 +1,26 @@
-<div class="categories-container" data-controller="filter">
-  <!-- Category Buttons (Links or buttons for each category) -->
-  <div class="categories-menu">
-    <h3>Select a Category</h3>
 
-    <button data-filter-target="vinil" data-action="click->filter#click" data-category="vinil">Vinil</button>
-    <button data-filter-target="cassete" data-action="click->filter#click" data-category="cassete">Cassete</button>
-    <button data-filter-target="old-stuff" data-action="click->filter#click" data-category="old-stuff">Old Stuff</button>
-    <button data-filter-target="cd" data-action="click->filter#click" data-category="cd">CD</button>
-  </div>
+<div class="categories-page-container" data-controller="filter">
+  <!-- Category Buttons (Links or buttons for each category) -->
+  <div class="categories-page-menu">
+    <h5>Select a Category</h5>
+    <h4>
+    <button class="btn btn-primary button card" style="background: #564dfe; color: #fff;" data-filter-target="vinyl" data-action="click->filter#click">Vinyl</button>
+    </h4>
+    <h4>
+    <button class="btn btn-primary button card" style="background: #8492c4; color: #fff;" data-filter-target="cassette-tape" data-action="click->filter#click">Cassette</button>
+    </h4>
+    <h4>
+    <button class="btn btn-primary button card" style="background: #ec5ac9; color: #fff;" data-filter-target="cd" data-action="click->filter#click">CD</button>
+    </h4>
+    <h4>
+    <button class="btn btn-primary button card" style="background: #ffec57; color: #fff;" data-filter-target="old-stuff" data-action="click->filter#click">Old Stuff</button>
+    </h4>
+
+    <%# <%# <button data-filter-target="cassete" data-action="click->filter#click">Cassete</button> %>
+    <%# <button data-filter-target="old-stuff" data-action="click->filter#click">Old Stuff</button>
+    <button data-filter-target="cd" data-action="click->filter#click">CD</button>
+  </div> %> %>
+
 
   <!-- Additional Products Grid Section (Optional) -->
   <section class="products-section">
@@ -36,31 +49,6 @@
   </section>
 </div>
 
-<!-- Additional Products Grid Section (Optional) -->
-<section class="products-section">
-  <div class="products-grid">
-    <% @products.each do |product| %>
-      <div class="product-card" data-filter-target="card" data-category="<%= product.category %>">
-        <div class="product-image">
-          <% if product.photo.attached? %>
-            <%= image_tag product.photo, alt: product.name %>
-          <% else %>
-            <img src="https://via.placeholder.com/300?text=No+Image" alt="<%= product.name %>" />
-          <% end %>
-        </div>
-
-        <h3 class="product-title">
-          <%= product.name %>
-        </h3>
-        <p class="product-price">
-          <span class="currency">R$</span>
-          <%= product.price %>
-        </p>
-        <%= link_to 'comprar', product_path(product), class: 'button-card' %>
-      </div>
-    <% end %>
-  </div>
-</section>
 
 <%#
 <section class="section-wrapper destaque-section">
@@ -80,10 +68,10 @@
     <%# <%= link_to products_path, class: "category-box cassete" do %>
     <%# Cassete %>
      <%# <% end %>
-    <%# <%= link_to products_path, class: "category-box cd" do %> %>
+    <%# <%= link_to products_path, class: "category-box cd" do %>
     <%# CD %>
     <%# <% end %>
-    <%# <%= link_to products_path, class: "category-box old-stuff" do %> %>
+    <%# <%= link_to products_path, class: "category-box old-stuff" do %>
     <%# Old Stuff %>
     <%# <% end %>
 <%# </div> %>
